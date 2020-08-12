@@ -1,0 +1,290 @@
+/* this is where we decorate and style our pages */
+
+/* we are importin a font from google link*/
+@import url(http://fonts.googleapis.com/css?family=Montserrat:400, 700);
+
+
+/* We called the header type from the index.html and give it a background color that is
+150px in height, we set the margin in the body element to 0 to get this background
+color to go to top and sides of webpage with no margin. We added a line-height
+to set the title on the 150px line from the top of page */
+#header{
+  background-color: #5F9EA0;
+  height: 200px;
+  margin-top: 0;
+
+
+}
+
+/* We called the header-title id with the # sign from the index.html. We float
+it on the left, enlarged the text to 20px with a bold feature and a left margin
+to move it away from edge of screen, we gave it a color that was overrided by the
+color given in the (#header a) */
+#header-title {
+
+  float: left;
+  font-size: 50px;
+  font-weight: bold;
+  margin-left: 40px;
+  line-height: 200px;
+}
+
+
+/* We called the links with (a) out of the header id with the # sign from the index.html and float it on the left
+we enlarged the text to 26px with a bold feature*/
+#header a {
+  color: #ffffff;
+  text-decoration: none;
+
+
+}
+
+/* We called the header links and created a hover feature that changes the color
+of the link when we hover over it*/
+#header a:hover {
+  color: #222;
+}
+
+
+/* We called the header-nav id with the # sign from the index.html. We float it
+ on the right and give it a line height of 260 to be near the bottom of our
+ colored header box, we transform text to capital letters and add a little space
+  between the letters, move it in from right side 20px and increased font size*/
+#header-nav {
+display: block;
+float: right;
+font-weight: bold;
+text-transform: uppercase;
+letter-spacing: 0.15em;
+line-height: 70px;
+font-size: 80px;
+margin-right: 20px;
+}
+
+
+/* We called the header-nav list id with the # sign from the index.html and
+asked to display it inline(side by side) and seperate them 20px with a left padding*/
+#header-nav li {
+  display: inline;
+  padding-left: 20px;
+}
+
+
+.scroll {
+float: left;
+
+}
+
+/*attempt to have a moving image on the homescreen*/
+.bitcoin {
+  width: 128px;
+  height: 158px;
+  background: url("bitcoin symbol small.png");
+  position: relative;
+  animation: myfirst 30s infinite;
+  animation-direction: alternate;
+}
+
+@keyframes myfirst {
+  0%   {background: url("bitcoin symbol small.png"); left: 50px; top: 0px;}
+  12.5%  {background: url("bitcoin symbol small blue.png"); left: 1620px; top: 0px;}
+  25%  {background: url("bitcoin symbol small r.png"); left: 1620px; top: 1940px;}
+  37.5%  {background: url("bitcoin symbol small w.png"); left: 50px; top: 1940px;}
+  50% {background: url("bitcoin symbol small purple.png"); left: 50px; top: 0px;}
+  62.5%  {background: url("bitcoin symbol small g.png"); left: 1620px; top: 1940px;}
+  75%  {background: url("bitcoin symbol small pink.png"); left: 1620px; top: 0px;}
+  87.5%  {background: url("bitcoin symbol small.png"); left: 50px; top: 1940px;}
+  100%  {background: url("bitcoin symbol small y.png"); left: 1620px; top: 1940px;}
+}
+
+/* We made this pic on the about page a circle but we have to call it over
+as a class not an id  We can also just add (border-raidus: 50%) at (.post-author img)
+and (.about-author img)  down below */
+.pic2 {
+  border-radius: 0px 500px 0px 500px;
+}
+
+img {
+  border-radius: 100px;
+}
+
+
+
+/* We called the .container class from the index.html and
+asked to display it with a max width of 1000px which will center the container
+ with an auto 0 margin*/
+.container{
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+
+
+/* to call on an id you need to place a (#) before the name used
+eg.  #footer{} will call the footer with an id = "footer" from the html page in an
+oprning tag in this case a div tag. This code had tb written before the
+(body element) before it would work.
+*/
+#footer {
+  background-color: #000000;
+
+  padding: 50px 0;
+
+}
+
+.column {
+  min-width: 350px;
+  display: inline-block;
+  vertical-align: text-top;
+}
+
+#footer h2 {
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+
+}
+
+
+/* Here we can ask jut the paragraph in the footer to be in
+ monospace type family*/
+#footer p {
+  font-family: monospace;
+
+}
+
+/* We called the header links and created a hover feature that changes the color
+of the link when we hover over it*/
+#footer a:hover {
+  color: white;
+}
+
+/*We set the properties of the entire body of the web page, with a margin of 0
+for items to go right to the edge of the page*/
+body{
+  background-color: #C0C0C0;
+  color: #778899;
+
+  margin: 0;
+  font-family: monospace;
+}
+
+#aboutbody{
+
+}
+
+
+
+/* we can decorate all parts of our website by starting with an element(type) selector and calling their types
+ ID's, classes  and more based on their tags. for example;  p, a, li, body, .container
+ here I called on all paragraphs(p) and links(a). Then prvided a declaration that consists of a property(color)
+ and a value(#2F4F4F) which is darkslategray */
+
+p, a{
+
+  color: #2F4F4F;
+  font-size: 18px;
+
+}
+
+/* Here we will add some more space in etween the lines in the paragraphs*/
+
+p {
+  line-height: 1.5;
+}
+
+/*  We will have all <a> elements the same color and so the link has
+is not underlined (text-decoratrion: none;)*/
+a {
+  color: #9370DB;
+  text-decoration: none;
+
+}
+
+/*to call on a class you need to place a period before the name used
+eg.  .p3{} will call the paragraph with a class = "p3" from the html page, this
+code had to go before (body a:hover) to work.
+*/
+
+.p3, .p4, .p1{
+  color: white;
+}
+
+
+}
+/* Here we make it so the links change color throughout the website
+but you have to put this code after you designate what color you wanted the links to
+be originally. We said above this what color it <a> will start with*/
+a:hover {
+  color: white;
+}
+
+#content:nth-child(even) {
+  background: #ccc;
+}
+
+
+
+/* Here is where we control the size of the posts and about content while
+giving it a 0 margin and 60px of padding on top*/
+.post, .about {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 100px 0;
+}
+/* We can make the image into a circle by adding (border-raidus: 50%)*/
+.post-author img {
+  width: 250px;
+  height: 250px;
+  vertical-align: super;
+}
+
+/* Calling the span which is the writing beside the picture, we can give
+it a left margin to give it some space between it and the image*/
+.post-author span {
+  margin-left: 16px;
+}
+
+.about-author span {
+  margin-left: 16px;
+}
+
+.post-date {
+  color: #000000;
+
+  font-size: 13px;
+  font-weight: bold;
+
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+
+
+
+h1, h2, h3, h4 {
+  color: #333;
+}
+
+h2 {
+  font-size: 26px;
+}
+
+
+.about {
+  text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* each element that we created a declaration for with a property and a value created a box and
+each box can be hidden 2 ways (visibility: hidden) or (display: none) with visibility
+it will still take up space but diplay acts like it was never there*/
